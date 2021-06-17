@@ -6,7 +6,15 @@ namespace EmployeeSalary
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            FileWorker.CheckFile();
+            try
+            {
+                FileWorker.CheckHeadsQuantity();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
